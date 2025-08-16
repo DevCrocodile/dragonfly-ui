@@ -5,7 +5,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function Card ({ children, className = '', ...props }: CardProps) {
-    const baseStyles = 'df:rounded-lg df:border df:border-border df:shadow-sm df:transition-shadow'
+    const baseStyles = 'df:rounded-lg df:border df:border-border df:shadow-sm df:transition-shadow df:bg-card'
     return (
         <div className={cn(baseStyles, className)} {...props}>
             {children}

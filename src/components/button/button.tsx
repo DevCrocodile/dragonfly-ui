@@ -22,7 +22,7 @@ const SIZES = {
     large: 'df:text-lg df:px-4 df:py-2 df:rounded-lg',
 }
 
-export function Button({ children, className, variant = "primary", size = "medium", type, onClick, disabled }: ButtonProps) {
+export function Button({ children, className = '', variant = "primary", size = "medium", type = "button", onClick = undefined, disabled = false }: ButtonProps) {
     const baseStyles = 'df:flex df:items-center df:cursor-pointer df:justify-center df:gap-2 df:transition-colors df:border df:font-medium df:px-4 df:py-2 df:disabled:pointer-events-none df:disabled:opacity-50 df:text-shadow-xs'
 
     return <button className={cn(baseStyles, VARIANTS[variant], SIZES[size], className)} type={type} onClick={onClick} disabled={disabled}>{children}</button>;

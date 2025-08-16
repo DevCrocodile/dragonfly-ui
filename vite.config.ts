@@ -4,6 +4,12 @@ import react from '@vitejs/plugin-react';
 import dts from "vite-plugin-dts";
 import { peerDependencies } from './package.json';
 import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename);
+
 // https://vite.dev/config/
 // import path from 'node:path';
 // import { fileURLToPath } from 'node:url';
@@ -20,6 +26,13 @@ export default defineConfig({
     }),
     tailwindcss()
   ],
+  resolve:{
+    alias:{
+      "@": resolve(__dirname, 'src'),
+      "@utils": resolve(__dirname, 'src/utils'),
+      "@components": resolve(__dirname, "src/components")
+    }
+  },
   build:{
     lib:{
       entry: './src/index.ts',

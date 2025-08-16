@@ -7,5 +7,10 @@
     --secondary: #FB8500;
     --secondary-hover:#E07A00;
     --secondary-foreground: #FFFFFF;
-    --df-border: #e2e8f0;
+}
+
+@theme {
+    --color-border: #e2e8f0;
+    --color-text: #2C2C2C;
+    --color-muted: #64748b;
 }

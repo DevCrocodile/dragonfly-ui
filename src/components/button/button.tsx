@@ -1,4 +1,4 @@
-import { cn } from "../../utils/classes";
+import { cn } from "@utils/classes";
 
 export interface ButtonProps{
     children: React.ReactNode;
@@ -13,7 +13,7 @@ export interface ButtonProps{
 const VARIANTS ={
     primary: 'df:bg-[var(--primary)] df:text-[var(--primary-foreground)] df:hover:bg-[var(--primary-hover)]',
     secondary: 'df:bg-[var(--secondary)] df:text-[var(--secondary-foreground)] df:hover:bg-[var(--secondary-hover)]',
-    ghost: 'df:bg-transparent df:hover:bg-slate-100 df:text-slate-900 df:hover:text-slate-700 df:border-[var(--df-border)] df:text-shadow-none',
+    ghost: 'df:bg-transparent df:hover:bg-slate-100 df:text-slate-900 df:hover:text-slate-700 df:border-border df:text-shadow-none',
 }
 
 const SIZES = {

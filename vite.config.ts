@@ -22,7 +22,7 @@ export default defineConfig({
     react(), 
     dts({
       tsconfigPath: "./tsconfig.app.json",
-      exclude: ['**/*.stories.ts', '**/*.test.ts']
+      exclude: ['**/*.stories.ts', '**/*.test.ts', '**/*.stories.tsx']
     }),
     tailwindcss()
   ],

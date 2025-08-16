@@ -1,1 +1,11 @@
 @import "tailwindcss" prefix(df);
+
+:root {
+    --primary: #023047;
+    --primary-hover: #012636;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FB8500;
+    --secondary-hover:#E07A00;
+    --secondary-foreground: #FFFFFF;
+    --df-border: #e2e8f0;
+}

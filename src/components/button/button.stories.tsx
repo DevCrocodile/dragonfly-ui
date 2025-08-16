@@ -24,11 +24,13 @@ export const Primary: Story = {
 export const Secondary: Story = {
     args: {
         children: 'Secondary Button',
+        variant: 'secondary',
     },
 };
 
 export const Disabled: Story = {
     args: {
         children: 'Disabled Button',
+        variant: 'ghost',
     },
 };

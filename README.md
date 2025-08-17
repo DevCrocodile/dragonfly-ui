@@ -1,69 +1,124 @@
-# React + TypeScript + Vite
+# Dragonfly UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React component library built with TypeScript and TailwindCSS, designed for scalable and accessible web applications.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Modern Design System** - Consistent, beautiful components
+- 🔧 **TypeScript Support** - Full type safety and IntelliSense
+- 🎯 **TailwindCSS** - Utility-first styling with custom prefix (`df:`)
+- 📚 **Storybook Integration** - Interactive component documentation
+- ⚡ **Vite Powered** - Fast development and build process
+- 🧪 **Testing Ready** - Vitest and Playwright configured
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install dragonfly-ui
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Components
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Avatar
+Display user avatars with fallback initials support.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```tsx
+import { Avatar } from 'dragonfly-ui'
+
+<Avatar userName="John Doe" size="medium" />
+<Avatar src="/avatar.jpg" userName="Jane Smith" />
 ```
+
+**Props:**
+- `src` - Image source URL
+- `userName` - User's name (for initials fallback)
+- `size` - `small` | `medium` | `large`
+- `className` - Additional CSS classes
+
+### Badge
+Status indicators and labels with semantic variants.
+
+```tsx
+import { Badge } from 'dragonfly-ui'
+
+<Badge variants="positive">Success</Badge>
+<Badge variants="warning">Warning</Badge>
+<Badge variants="negative">Error</Badge>
+```
+
+**Props:**
+- `variants` - `positive` | `negative` | `warning` | `ghost` | `primary` | `secondary`
+- `className` - Additional CSS classes
+
+### Button
+Interactive buttons with multiple variants and sizes.
+
+```tsx
+import { Button } from 'dragonfly-ui'
+
+<Button variant="primary" size="medium" onClick={handleClick}>
+  Click me
+</Button>
+```
+
+**Props:**
+- `variant` - `primary` | `secondary` | `ghost`
+- `size` - `small` | `medium` | `large`
+- `onClick` - Click handler function
+- `className` - Additional CSS classes
+- Extends all standard HTML button attributes
+
+### Card
+Flexible container components for content organization.
+
+```tsx
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from 'dragonfly-ui'
+
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card description text</CardDescription>
+  </CardHeader>
+  <CardContent>
+    Main content goes here
+  </CardContent>
+  <CardFooter>
+    Footer content
+  </CardFooter>
+</Card>
+```
+
+**Components:**
+- `Card` - Main container
+- `CardHeader` - Header section
+- `CardTitle` - Title text
+- `CardDescription` - Description text
+- `CardContent` - Main content area
+- `CardFooter` - Footer section
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Run Storybook
+npm run storybook
+
+# Build library
+npm run build
+
+# Lint code
+npm run lint
+```
+
+## Styling
+
+This library uses TailwindCSS with a custom `df:` prefix to avoid conflicts with your application's styles. CSS custom properties are used for theming support.
+
+## License
+
+Private library - see package.json for details.

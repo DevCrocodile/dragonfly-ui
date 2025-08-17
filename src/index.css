@@ -4,9 +4,11 @@
     --primary: #023047;
     --primary-hover: #012636;
     --primary-foreground: #FFFFFF;
+    --primary-surface: #02304726;
     --secondary: #FB8500;
     --secondary-hover:#E07A00;
     --secondary-foreground: #FFFFFF;
+    --secondary-surface: #fb850026;
 }
 
 @theme {

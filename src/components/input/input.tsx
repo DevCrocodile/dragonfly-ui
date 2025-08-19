@@ -1,9 +1,9 @@
 import { cn } from "@utils/classes";
-import type { FiledProps } from "@/types";
+import type { FieldProps } from "@/types";
 
 export interface InputProps {
     placeholder?: string;
-    field: FiledProps;
+    field: FieldProps;
     label?: string;
     className?: string;
     errorMessage?: string;

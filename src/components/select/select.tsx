@@ -1,4 +1,4 @@
-import type { FiledProps } from '@/types';
+import type { FieldProps } from '@/types';
 import { cn } from '@utils/classes';
 
 interface Option {
@@ -9,7 +9,7 @@ interface Option {
 export interface SelectProps {
     options: Option[];
     label?: string;
-    field: FiledProps;
+    field: FieldProps;
     className?: string;
     errorMessage?: string;
 }

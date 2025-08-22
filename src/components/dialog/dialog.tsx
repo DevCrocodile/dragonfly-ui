@@ -1,4 +1,5 @@
 import { createContext, useRef, useContext, isValidElement, cloneElement } from "react";
+import type { ElementWithOnClick } from "@/types";
 
 interface DialogContextProps {
     dialogRef: React.RefObject<HTMLDialogElement | null>;
@@ -33,10 +34,6 @@ export function Dialog ({children}: DialogProps) {
             {children}
         </DialogContext.Provider>
     );
-}
-
-interface ElementWithOnClick {
-    onClick?: (e: React.MouseEvent) => void;
 }
 
 interface DialogActionProps {

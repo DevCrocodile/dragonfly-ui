@@ -7,3 +7,4 @@ export { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from '@compo
 export { Input } from '@components/input';
 export { Select } from '@components/select';
 export { useField } from '@/hooks/useField';
+export { Dialog, DialogTrigger, DialogContent, DialogClose } from '@components/dialog';

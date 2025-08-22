@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useRef, useEffect, isValidElement, cloneElement } from "react";
-import { cn } from "@/utils/classes";
+import { cn } from "@utils/classes";
+import type { ElementWithOnClick } from "@/types";
 
 interface DropdownContext {
     showDropdown: boolean;
@@ -50,10 +51,6 @@ export function Dropdown({ children }: DropdownProps) {
             </div>
         </DropdownContext.Provider>
     )
-}
-
-interface ElementWithOnClick {
-    onClick?: (e: React.MouseEvent) => void;
 }
 
 interface DropdownTriggerProps {

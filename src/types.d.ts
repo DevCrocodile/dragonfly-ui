@@ -4,3 +4,7 @@ export interface FieldProps {
     type: string;
     required?: boolean;
 }
+
+export interface ElementWithOnClick {
+    onClick?: (e: React.MouseEvent) => void;
+}

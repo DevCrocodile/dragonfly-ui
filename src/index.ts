@@ -8,3 +8,4 @@ export { Input } from '@components/input';
 export { Select } from '@components/select';
 export { useField } from '@/hooks/useField';
 export { Dialog, DialogTrigger, DialogContent, DialogClose } from '@components/dialog';
+export { Table, TableHeader, TableHead, TableBody, TableRow, TableCell } from '@components/table';

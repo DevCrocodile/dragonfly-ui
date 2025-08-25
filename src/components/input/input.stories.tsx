@@ -5,8 +5,8 @@ import { useField } from '@/hooks/useField';
 const meta: Meta<InputProps> = {
     title: 'Components/Input',
     component: Input,
-    argTypes:{
-        placeholder:{
+    argTypes: {
+        placeholder: {
             control: {
                 type: 'text'
             }
@@ -35,7 +35,7 @@ type Story = StoryObj<InputProps>;
 
 const InputWithField = () => {
     const field = useField({ type: 'text' });
-    return <Input field={field} label='Nombre de usuario' placeholder='John' errorMessage='Esto es un mensaje de error'/>;
+    return <Input field={field} label='Nombre de usuario' placeholder='John' errorMessage='Esto es un mensaje de error' />;
 }
 
 export const Default: Story = {

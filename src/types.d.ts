@@ -8,3 +8,8 @@ export interface FieldProps {
 export interface ElementWithOnClick {
     onClick?: (e: React.MouseEvent) => void;
 }
+
+export interface CheckboxFieldProps extends FieldProps {
+    checked: boolean;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}

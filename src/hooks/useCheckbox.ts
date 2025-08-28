@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function useCheckbox({ required = false }: { required?: boolean }) {
+export function useCheckbox({ id, required = false }: { id: string; required?: boolean }) {
     const [checked, setChecked] = useState(false);
     const onChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         setChecked(event.target.checked);
@@ -11,5 +11,6 @@ export function useCheckbox({ required = false }: { required?: boolean }) {
         required,
         type: "checkbox",
         value: checked ? "on" : "off",
+        id
     };
 }

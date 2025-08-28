@@ -6,6 +6,7 @@ export { Avatar } from '@components/avatar';
 export { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from '@components/dropdown';
 export { Input } from '@components/input';
 export { Select } from '@components/select';
+export { Checkbox } from '@components/checkbox';
 export { useField } from '@/hooks/useField';
 export { Dialog, DialogTrigger, DialogContent, DialogClose } from '@components/dialog';
 export { Table, TableHeader, TableHead, TableBody, TableRow, TableCell } from '@components/table';

@@ -14,3 +14,4 @@ export { Table, TableHeader, TableHead, TableBody, TableRow, TableCell } from '@
 export { Tabs, TabList, TabTrigger, TabContent } from '@components/tabs';
 export { TextArea } from '@components/textarea';
 export { Label } from '@components/label';
+export { Skeleton } from '@components/skeleton';

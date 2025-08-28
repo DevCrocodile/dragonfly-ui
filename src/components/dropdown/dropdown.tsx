@@ -47,7 +47,7 @@ export function Dropdown({ children }: DropdownProps) {
     return (
         <DropdownContext.Provider value={{ showDropdown, setShowDropdown, toggleDropdown }}>
             <div ref={containerRef}>
-            {children}
+                {children}
             </div>
         </DropdownContext.Provider>
     )
@@ -61,7 +61,7 @@ interface DropdownTriggerProps {
 export function DropdownTrigger({ children, asChild }: DropdownTriggerProps) {
     const { toggleDropdown } = useDropdown();
 
-    if(asChild && isValidElement(children)){
+    if (asChild && isValidElement(children)) {
         const originalProps = children.props as ElementWithOnClick;
         const originalOnClick = 'onClick' in originalProps ? originalProps.onClick : undefined;
         const newProps = {
@@ -88,14 +88,12 @@ interface DropdownContentProps {
     className?: string;
 }
 
-export function DropdownContent({ children, className='' }: DropdownContentProps) {
+export function DropdownContent({ children, className = '' }: DropdownContentProps) {
     const { showDropdown } = useDropdown();
 
-    if(!showDropdown) return null;
-
-    const baseStyles = 'df:mt-1 df:text-start df:top-full df:bg-white df:z-50 df:w-fit df:overflow-hidden df:rounded-md df:border df:border-border df:p-1 df:shadow-md df:flex df:flex-col df:gap-1';
+    const baseStyles = 'df:gap-1 df:mt-1 df:text-start df:top-full df:bg-white df:z-50 df:w-fit df:overflow-hidden df:rounded-md df:border-border df:shadow-md df:flex df:flex-col df:gap-1';
     return (
-        <div className={cn(baseStyles, className)}>
+        <div className={cn(showDropdown ? 'df:h-auto df:p-1 df:border df:transition-all' : 'df:h-0 df:transition-none', baseStyles, className)}>
             {children}
         </div>
     )
@@ -110,8 +108,8 @@ interface DropdownItemProps {
 export function DropdownItem({ children, className, onClick }: DropdownItemProps) {
     const { setShowDropdown } = useDropdown();
 
-    const handleClick = () =>{
-        if(onClick) onClick();
+    const handleClick = () => {
+        if (onClick) onClick();
 
         setShowDropdown(false);
     }

@@ -19,9 +19,9 @@ export const Default: Story = {
                     <Button variant='ghost'>Open Dropdown</Button>
                 </DropdownTrigger>
                 <DropdownContent>
-                    <DropdownItem onClick={() => {alert('Item 1 clicked')}} className='df:bg-red-500 df:text-white df:hover:bg-red-700'>Item 1</DropdownItem>
-                    <DropdownItem onClick={() => {alert('Item 2 clicked')}}>Item 2</DropdownItem>
-                    <DropdownItem onClick={() => {alert('Item 3 clicked')}}>Item 3</DropdownItem>
+                    <DropdownItem onClick={() => { alert('Item 1 clicked') }} className='df:bg-red-500 df:text-white df:hover:bg-red-700'>Item 1</DropdownItem>
+                    <DropdownItem onClick={() => { alert('Item 2 clicked') }}>Item 2</DropdownItem>
+                    <DropdownItem onClick={() => { alert('Item 3 clicked') }}>Item 3</DropdownItem>
                 </DropdownContent>
             </>
         )

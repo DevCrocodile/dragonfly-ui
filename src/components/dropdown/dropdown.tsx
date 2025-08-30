@@ -91,9 +91,9 @@ interface DropdownContentProps {
 export function DropdownContent({ children, className = '' }: DropdownContentProps) {
     const { showDropdown } = useDropdown();
 
-    const baseStyles = 'df:gap-1 df:mt-1 df:text-start df:top-full df:bg-white df:z-50 df:w-fit df:overflow-hidden df:rounded-md df:border-border df:shadow-md df:flex df:flex-col df:gap-1';
+    const baseStyles = 'df:gap-1 df:mt-1 df:text-start df:top-full df:bg-white df:z-50 df:w-fit df:overflow-hidden df:rounded-md df:border-border df:shadow-md df:flex df:flex-col df:gap-1 df:p-1 df:transition-transform df:duration-100 df:ease-out df:origin-top';
     return (
-        <div className={cn(showDropdown ? 'df:h-auto df:p-1 df:border df:transition-all' : 'df:h-0 df:transition-none', baseStyles, className)}>
+        <div className={cn(showDropdown ? 'df:scale-y-100 df:opacity-100' : 'df:scale-y-0 df:opacity-0', baseStyles, className)}>
             {children}
         </div>
     )

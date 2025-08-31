@@ -17,3 +17,4 @@ export { Label } from '@components/label';
 export { Skeleton } from '@components/skeleton';
 export { Combobox, ComboboxTrigger, ComboboxContent, ComboboxSearch, ComboboxList, ComboboxSeparator } from '@components/combobox';
 export { ProgressBar } from '@components/progressbar';
+export { Switch } from '@components/switch';

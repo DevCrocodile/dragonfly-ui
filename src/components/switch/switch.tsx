@@ -15,7 +15,7 @@ export function Switch({ value, setValue, className, color }: SwitchProps) {
                     "df:bg-blue-500": value,
                 })}
                 onClick={() => { setValue(!value) }}
-                style={{ backgroundColor: value ? color : '#d1d5dc' }}
+                style={{ backgroundColor: value ? color : 'var(--border)' }}
             >
                 <div
                     className={cn("df:w-4 df:h-4 df:rounded-full df:bg-white df:absolute df:top-1 df:left-1 df:transition-transform", {

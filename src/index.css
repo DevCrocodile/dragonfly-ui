@@ -22,13 +22,6 @@
     --ring: #3B82F6;
 }
 
-@theme {
-    --color-border: #e2e8f0;
-    --color-text: #2C2C2C;
-    --color-muted: #64748b;
-    --color-card: #FFFFFF;
-}
-
 .dark {
     --card: #1E1E1E;
     --card-foreground: #FFFFFF;

@@ -17,9 +17,18 @@ type Story = StoryObj<SwitchProps>;
 
 const SwitchWithState = () => {
     const [value, setValue] = useState(false);
-    return <Switch value={value} setValue={setValue} />;
+    return <Switch value={value} setValue={setValue} color='var(--primary)' />;
 };
+
+const SwitchDarkWithState = () => {
+    const [value, setValue] = useState(false);
+    return <div className="dark"><Switch value={value} setValue={setValue} color='var(--primary)' /></div>;
+}
 
 export const Default: Story = {
     render: () => <SwitchWithState />
+};
+
+export const Dark: Story = {
+    render: () => <SwitchDarkWithState />
 };

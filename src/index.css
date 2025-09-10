@@ -9,6 +9,10 @@
     --secondary-hover:#E07A00;
     --secondary-foreground: #FFFFFF;
     --secondary-surface: #fb850026;
+    --ghost: #rgba(255, 255, 255, 0);
+    --ghost-hover: #f1f5f9;
+    --ghost-foreground: #334155;
+    --ghost-surface: #f1f5f926;
     --card: #FFFFFF;
     --card-foreground: #000000;
     --card-muted-foreground: #A3A3A3;
@@ -27,4 +31,16 @@
     --card-foreground: #FFFFFF;
     --card-muted-foreground: #A3A3A3;
     --border: #ffffff1a;
+    --primary: #90CDF4;
+    --primary-hover: #63B3ED;
+    --primary-foreground: #000000;
+    --primary-surface: #90CDF426;
+    --secondary: #F6AD55;
+    --secondary-hover: #ED8936;
+    --secondary-foreground: #000000;
+    --secondary-surface: #F6AD5526;
+    --ghost: #rgba(255, 255, 255, 0);
+    --ghost-hover: #374151;
+    --ghost-foreground: #FFFFFF;
+    --ghost-surface: #37415126;
 }

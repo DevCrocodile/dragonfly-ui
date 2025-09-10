@@ -1,6 +1,8 @@
 @import "tailwindcss" prefix(df);
 
 :root {
+    --text: #2C2C2C;
+    --muted: #64748B;
     --primary: #023047;
     --primary-hover: #012636;
     --primary-foreground: #FFFFFF;
@@ -43,4 +45,6 @@
     --ghost-hover: #374151;
     --ghost-foreground: #FFFFFF;
     --ghost-surface: #37415126;
+    --text: #FFFFFF;
+    --muted: #9CA3AF;
 }

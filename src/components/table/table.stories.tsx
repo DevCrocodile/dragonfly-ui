@@ -11,6 +11,9 @@ const meta: Meta<TableProps> = {
         TableBody,
         TableCell,
         TableRow
+    },
+    argTypes: {
+        className: { control: "text" }
     }
 }
 

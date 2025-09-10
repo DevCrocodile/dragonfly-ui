@@ -1,56 +1,60 @@
+import { cn } from "@/utils/classes";
+
 export interface TableProps {
     children: React.ReactNode;
+    className?: string;
 }
 
 interface TableComponentProps {
     children: React.ReactNode;
+    className?: string;
 }
 
-export function TableHeader({ children }: TableComponentProps) {
+export function TableHeader({ children, className }: TableComponentProps) {
     return (
-        <thead className="df:border-b df:border-b-slate-500/20 df:bg-gray-200/50">
-            <tr className="df:transition-colors df:hover:bg-gray-200/70">
+        <thead className={cn("df:border-b df:border-b-[var(--border)] df:bg-[var(--card)]", className)}>
+            <tr className="df:transition-colors df:hover:bg-[var(--card)]">
                 {children}
             </tr>
         </thead>
     )
 }
 
-export function TableHead({ children }: TableComponentProps) {
+export function TableHead({ children, className }: TableComponentProps) {
     return (
-        <th className="df:h-12 df:px-4 df:text-left df:align-middle df:font-medium df:text-slate-500/80">
+        <th className={cn("df:h-12 df:px-4 df:text-left df:align-middle df:font-medium df:text-[var(--muted)]", className)}>
             {children}
         </th>
     )
 }
 
-export function TableBody({ children }: TableComponentProps) {
+export function TableBody({ children, className }: TableComponentProps) {
     return (
-        <tbody className="df:[&_tr:last-child]:border-0">
+        <tbody className={cn("df:[&_tr:last-child]:border-0", className)}>
             {children}
         </tbody>
     )
 }
 
-export function TableRow({ children }: TableComponentProps) {
+export function TableRow({ children, className }: TableComponentProps) {
     return (
-        <tr className="df:border-b df:border-b-slate-500/20 df:transition-colors df:bg-white">
+        <tr className={cn("df:border-b df:border-b-[var(--border)] df:transition-colors df:bg-[var(--card)] df:text-sm", className)}>
             {children}
         </tr>
     )
 }
 
-export function TableCell({ children }: TableComponentProps) {
+export function TableCell({ children, className }: TableComponentProps) {
     return (
-        <td className="df:p-4">
+        <td className={cn("df:p-4 df:text-[var(--text)]", className)}>
             {children}
         </td>
     )
 }
 
-export function Table({ children }: TableProps) {
+export function Table({ children, className }: TableProps) {
     return (
-        <div className="df:rounded-md df:border df:border-slate-500/20 df:overflow-hidden">
+        <div className={cn("df:rounded-md df:border df:border-[var(--border)] df:overflow-hidden", className)}>
             <table className="df:relative df:w-full df:overflow-auto">
                 {children}
             </table>

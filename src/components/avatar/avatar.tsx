@@ -13,12 +13,12 @@ export interface AvatarProps {
     className?: string;
 }
 
-export function Avatar({ src, userName = '', size = "medium", className = ''}: AvatarProps) {
+export function Avatar({ src, userName = '', size = "medium", className = '' }: AvatarProps) {
     const initials = userName.split(' ').map((name) => name[0]).join('').toUpperCase()
     const baseStyles = 'df:flex df:items-center df:justify-center df:rounded-full df:bg-[var(--primary-surface)] df:text-[var(--primary)]'
     return (
         <div className={cn(baseStyles, SIZES[size], className)}>
-            {src ? <img src={src} alt={userName} className="df:w-full df:h-full df:rounded-full df:object-cover"/> : <div>{initials}</div>}
+            {src ? <img src={src} alt={userName} className="df:w-full df:h-full df:rounded-full df:object-cover" /> : <div>{initials}</div>}
         </div>
     );
 }

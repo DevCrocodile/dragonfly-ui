@@ -39,6 +39,20 @@ const InputWithField = () => {
     );
 }
 
+const InputWithDarkMode = () => {
+    const field = useField({ type: 'text', id: 'username' });
+    return (
+        <div className='df:flex df:flex-col df:gap-1 dark'>
+            <Label htmlFor={field.id}>Username</Label>
+            <Input field={field} placeholder='John' errorMessage='Esto es un mensaje de error' />
+        </div>
+    );
+}
+
 export const Default: Story = {
     render: () => <InputWithField />
+};
+
+export const DarkMode: Story = {
+    render: () => <InputWithDarkMode />
 };

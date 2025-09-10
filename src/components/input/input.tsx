@@ -9,7 +9,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
 }
 
 export function Input({ placeholder, className, errorMessage, field, ...props }: InputProps) {
-    const baseStyles = 'df:m-0 df:flex df:h-10 df:w-full df:rounded-md df:border df:border-border df:px-3 df:py-2 df:text-sm df:file:border-0 df:file:bg-transparent df:file:text-sm df:file:font-medium df:placeholder:text-description df:focus-visible:outline-none df:focus-visible:ring-2 df:focus-visible:ring-blue-500 df:focus-visible:ring-offset-2 df:disabled:cursor-not-allowed df:disabled:opacity-50'
+    const baseStyles = 'df:text-[var(--text)] df:m-0 df:flex df:h-10 df:w-full df:rounded-md df:border df:border-[var(--border)] df:px-3 df:py-2 df:text-sm df:file:border-0 df:file:bg-transparent df:file:text-sm df:file:font-medium df:placeholder:text-[var(--muted)] df:focus-visible:outline-none df:focus-visible:ring-2 df:focus-visible:ring-[var(--ring)] df:disabled:cursor-not-allowed df:disabled:opacity-50'
     return (
         <>
             <input placeholder={placeholder} className={cn(baseStyles, className)} {...field} {...props} />

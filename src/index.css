@@ -19,6 +19,7 @@
     --card-foreground: #000000;
     --card-muted-foreground: #A3A3A3;
     --border: #E2E8F0;
+    --ring: #3B82F6;
 }
 
 @theme {
@@ -47,4 +48,5 @@
     --ghost-surface: #37415126;
     --text: #FFFFFF;
     --muted: #9CA3AF;
+    --ring: #3B82F6;
 }

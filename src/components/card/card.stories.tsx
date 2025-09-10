@@ -5,8 +5,8 @@ import { Button } from '../button';
 const meta: Meta<CardProps> = {
   title: 'Components/Card',
   component: Card,
-  argTypes:{
-    children:{
+  argTypes: {
+    children: {
       control: 'text'
     },
     className: {
@@ -37,3 +37,23 @@ export const Primary: Story = {
     ),
   },
 };
+
+export const DarkMode: Story = {
+  args: {
+    className: 'dark',
+    children: (
+      <>
+        <CardHeader>
+          <CardTitle>Card Title</CardTitle>
+          <CardDescription>Card description goes here.</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className='df:text-[var(--card-foreground)]'>This is the content of the card.</p>
+        </CardContent>
+        <CardFooter>
+          <Button>Call to Action</Button>
+        </CardFooter>
+      </>
+    )
+  }
+}

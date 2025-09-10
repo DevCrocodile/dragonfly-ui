@@ -9,6 +9,10 @@
     --secondary-hover:#E07A00;
     --secondary-foreground: #FFFFFF;
     --secondary-surface: #fb850026;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --card-muted-foreground: #A3A3A3;
+    --border: #E2E8F0;
 }
 
 @theme {
@@ -16,4 +20,11 @@
     --color-text: #2C2C2C;
     --color-muted: #64748b;
     --color-card: #FFFFFF;
+}
+
+.dark {
+    --card: #1E1E1E;
+    --card-foreground: #FFFFFF;
+    --card-muted-foreground: #A3A3A3;
+    --border: #ffffff1a;
 }

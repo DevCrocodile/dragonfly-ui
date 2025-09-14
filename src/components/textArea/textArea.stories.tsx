@@ -20,12 +20,27 @@ type Story = StoryObj<TextAreaProps>;
 const TextAreaWithHook = () => {
     const field = useField({ type: 'text', id: 'text-area-id' });
     return (
-        <>
+        <div>
             <Label htmlFor={field.id}>Text Area</Label>
             <TextArea field={field} placeholder='Enter text here...' errorMessage='Este es un mensaje de error' />
-        </>
+        </div>
     );
 }
+
+const TextAreaDarkMode = () => {
+    const field = useField({ type: 'text', id: 'text-area-id' });
+    return (
+        <div className='dark'>
+            <Label htmlFor={field.id}>Text Area</Label>
+            <TextArea field={field} placeholder='Enter text here...' errorMessage='Este es un mensaje de error' />
+        </div>
+    );
+}
+
 export const Default: Story = {
     render: () => <TextAreaWithHook />
 };
+
+export const DarkMode: Story = {
+    render: () => <TextAreaDarkMode />
+}

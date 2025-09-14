@@ -9,7 +9,7 @@ export interface TextAreaProps {
 }
 
 export function TextArea({ field, className, errorMessage, placeholder }: TextAreaProps) {
-    const baseStyles = 'df:m-0 df:flex df:h-24 df:w-full df:rounded-md df:border df:border-border df:px-3 df:py-2 df:text-sm df:focus-visible:outline-none df:focus-visible:ring-2 df:focus-visible:ring-blue-500 df:focus-visible:ring-offset-2'
+    const baseStyles = 'df:focus-visible:ring-[var(--ring)] df:placeholder:text-[var(--muted)] df:text-[var(--text)] df:m-0 df:flex df:h-24 df:w-full df:rounded-md df:border df:border-[var(--border)] df:px-3 df:py-2 df:text-sm df:focus-visible:outline-none df:focus-visible:ring-2 df:focus-visible:ring-blue-500 df:focus-visible:ring-offset-2'
     return (
         <>
             <textarea className={cn(baseStyles, className)} {...field} placeholder={placeholder} />

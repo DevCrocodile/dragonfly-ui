@@ -16,7 +16,7 @@ const ComboboxWithHook = () => {
     const [value, setValue] = useState("");
 
     return (
-        <>
+        <div className='dark'>
             <Combobox options={["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grape"]} value={value} setValue={setValue}>
                 <ComboboxTrigger asChild>
                     <Button className='df:min-w-[150px] df:flex df:justify-start'>
@@ -30,7 +30,7 @@ const ComboboxWithHook = () => {
                 </ComboboxContent>
             </Combobox>
             <div>El valor actual es: {value}</div>
-        </>
+        </div>
     )
 }
 

@@ -99,7 +99,7 @@ export function ComboboxContent({ children, className }: ComboboxContentProps) {
     const { showCombobox } = useCombobox();
 
     return (
-        <div className={cn(showCombobox ? "df:scale-y-100 df:opacity-100" : "df:scale-y-0 df:opacity-0", "df:border df:border-border df:w-fit df:p-1 df:rounded-md df:transition-transform df:duration-100 df:ease-out df:origin-top df:absolute df:mt-1 df:bg-white", className)}>
+        <div className={cn(showCombobox ? "df:scale-y-100 df:opacity-100" : "df:scale-y-0 df:opacity-0", "df:border df:border-[var(--border)] df:w-fit df:p-1 df:rounded-md df:transition-transform df:duration-100 df:ease-out df:origin-top df:absolute df:mt-1 df:bg-[var(--card)]", className)}>
             {children}
         </div>
     )
@@ -110,7 +110,7 @@ export function ComboboxSearch() {
     return (
         <div className="df:relative">
             <Search className="df:absolute df:left-2 df:top-1/2 df:-translate-y-1/2 df:text-gray-400" width={16} height={16} />
-            <input placeholder="Search..." {...searchTerm} className="df:pl-8 df:py-1 df:focus:outline-none" />
+            <input placeholder="Search..." {...searchTerm} className="df:pl-8 df:py-1 df:focus:outline-none df:placeholder:text-[var(--muted)] df:text-[var(--text)]" />
         </div>
     )
 }
@@ -120,7 +120,7 @@ export function ComboboxList() {
     return (
         <ul className="df:flex df:flex-col df:gap-1 df:max-h-40 df:overflow-y-auto df:mt-1">
             {filteredOptions.map(option => (
-                <li key={option} className="df:py-1 df:hover:bg-gray-100 df:px-1.5 df:rounded-sm df:flex df:justify-between df:items-center df:cursor-pointer" onClick={() => { handleOptionClick(option) }}>{option}
+                <li key={option} className="df:py-1 df:hover:bg-[var(--card-hover)] df:text-[var(--muted)] df:px-1.5 df:rounded-sm df:flex df:justify-between df:items-center df:cursor-pointer" onClick={() => { handleOptionClick(option) }}>{option}
                     {value === option && <Check className="df:opacity-80" width={18} height={18} />}
                 </li>
             ))}

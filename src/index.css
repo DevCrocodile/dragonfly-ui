@@ -18,6 +18,7 @@
     --card: #FFFFFF;
     --card-foreground: #000000;
     --card-muted-foreground: #A3A3A3;
+    --card-hover: #F1F5F9;
     --border: #E2E8F0;
     --ring: #3B82F6;
 }
@@ -26,6 +27,7 @@
     --card: #1E1E1E;
     --card-foreground: #FFFFFF;
     --card-muted-foreground: #A3A3A3;
+    --card-hover: #313843;
     --border: #ffffff1a;
     --primary: #90CDF4;
     --primary-hover: #63B3ED;

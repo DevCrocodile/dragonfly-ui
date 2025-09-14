@@ -50,7 +50,7 @@ interface TabListProps {
 
 export function TabList({ children, className }: TabListProps) {
     return (
-        <div role="tablist" className={cn("df:flex df:items-center df:justify-center df:rounded-md df:bg-slate-100 df:p-1 df:gap-1 df:w-fit", className)}>
+        <div role="tablist" className={cn("df:flex df:items-center df:justify-center df:rounded-md df:bg-[var(--muted)]/10 df:p-1 df:gap-1 df:w-fit", className)}>
             {children}
         </div>
     )
@@ -74,7 +74,7 @@ export function TabTrigger({ value, children, className }: TabTriggerProps) {
             tabIndex={activeTab === value ? 0 : -1}
             onClick={() => { handleTabClick(value) }}
             onKeyDown={(e) => { handleKeyDown(e, value) }}
-            className={cn(activeTab === value ? 'df:border-border df:font-semibold df:bg-white df:hover:bg-white/90' : 'df:border-transparent df:text-muted-foreground df:hover:bg-slate-200', 'df:px-3 df:py-1.5', className)}
+            className={cn(activeTab === value ? 'df:border-[var(--border)] df:font-semibold df:bg-[var(--card)] df:hover:bg-[var(--card)]/90' : 'df:border-transparent df:text-[var(--muted)] df:hover:bg-[var(--muted)]/10', 'df:px-3 df:py-1.5', className)}
         >
             {children}
         </Button>

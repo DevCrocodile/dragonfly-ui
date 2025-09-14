@@ -13,7 +13,7 @@ type Story = StoryObj<TabsProps>;
 export const Default: Story = {
     args: {
         children: (
-            <Tabs defaultTab="tab1">
+            <div>
                 <TabList>
                     <TabTrigger value="tab1">Tab 1</TabTrigger>
                     <TabTrigger value="tab2">Tab 2</TabTrigger>
@@ -22,7 +22,24 @@ export const Default: Story = {
                 <TabContent value="tab1">Content for Tab 1</TabContent>
                 <TabContent value="tab2">Content for Tab 2</TabContent>
                 <TabContent value="tab3">Content for Tab 3</TabContent>
-            </Tabs>
+            </div>
         )
     }
 };
+
+export const DarkMode: Story = {
+    args: {
+        children: (
+            <div className='dark'>
+                <TabList>
+                    <TabTrigger value="tab1">Tab 1</TabTrigger>
+                    <TabTrigger value="tab2">Tab 2</TabTrigger>
+                    <TabTrigger value="tab3">Tab 3</TabTrigger>
+                </TabList>
+                <TabContent value="tab1">Content for Tab 1</TabContent>
+                <TabContent value="tab2">Content for Tab 2</TabContent>
+                <TabContent value="tab3">Content for Tab 3</TabContent>
+            </div>
+        )
+    }
+}

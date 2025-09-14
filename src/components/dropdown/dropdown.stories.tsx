@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         children: (
-            <>
+            <div className='dark'>
                 <DropdownTrigger asChild>
                     <Button variant='ghost'>Open Dropdown</Button>
                 </DropdownTrigger>
@@ -23,7 +23,7 @@ export const Default: Story = {
                     <DropdownItem onClick={() => { alert('Item 2 clicked') }}>Item 2</DropdownItem>
                     <DropdownItem onClick={() => { alert('Item 3 clicked') }}>Item 3</DropdownItem>
                 </DropdownContent>
-            </>
+            </div>
         )
     },
 };

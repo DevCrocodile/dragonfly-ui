@@ -9,7 +9,8 @@
   "exports": {
     ".": {
       "import": "./dist/dragonfly-ui.es.js",
-      "require": "./dist/dragonfly-ui.cjs.js"
+      "require": "./dist/dragonfly-ui.cjs.js",
+      "types": "./dist/index.d.ts"
     },
     "./styles": "./dist/dragonfly-ui.css"
   },

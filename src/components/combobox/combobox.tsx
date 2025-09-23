@@ -109,7 +109,7 @@ export function ComboboxSearch() {
     const { searchTerm } = useCombobox();
     return (
         <div className="df:relative">
-            <Search className="df:absolute df:left-2 df:top-1/2 df:-translate-y-1/2 df:text-gray-400" width={16} height={16} />
+            <Search className="df:absolute df:left-2 df:top-1/2 df:-translate-y-1/2 df:text-[var(--muted)]" width={16} height={16} />
             <input placeholder="Search..." {...searchTerm} className="df:pl-8 df:py-1 df:focus:outline-none df:placeholder:text-[var(--muted)] df:text-[var(--text)]" />
         </div>
     )

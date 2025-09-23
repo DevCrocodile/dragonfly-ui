@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Searchbar, type SearchbarProps } from './Searchbar';
+import { Searchbar, type SearchbarProps } from './searchbar';
 import { useField } from '@/hooks/useField';
 
 const meta: Meta<SearchbarProps> = {

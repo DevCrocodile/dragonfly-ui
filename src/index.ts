@@ -20,3 +20,4 @@ export { ProgressBar } from '@components/progressbar';
 export { Switch } from '@components/switch';
 export { Carousel, CarouselSlide, CarouselNext, CarouselPrev, CarouselContent } from '@components/carousel';
 export { Searchbar } from '@components/searchbar';
+export type { FieldProps, CheckboxFieldProps } from './types';

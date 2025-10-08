@@ -12,7 +12,7 @@ export function ProgressBar({ progress, className, color }: ProgressBarProps) {
             <div
                 className={cn("df:absolute df:top-0 df:left-0 df:h-full df:rounded-full", {
                     "df:transition-all df:duration-300": progress < 100,
-                })}
+                }, color ? "" : "df:bg-[var(--primary)]")}
                 style={{ width: `${progress.toString()}%`, backgroundColor: color }}
             />
         </div>

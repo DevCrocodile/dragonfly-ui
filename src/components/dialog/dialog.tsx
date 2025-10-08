@@ -20,9 +20,10 @@ function useDialogContext() {
 export interface DialogProps {
     children: React.ReactNode;
     open?: boolean;
+    onOpenChange?: (open: boolean) => void;
 }
 
-export function Dialog({ children, open }: DialogProps) {
+export function Dialog({ children, open, onOpenChange }: DialogProps) {
     const dialogRef = useRef<HTMLDialogElement>(null);
 
     useEffect(() => {
@@ -40,9 +41,14 @@ export function Dialog({ children, open }: DialogProps) {
     }, [open]);
 
     function toggleDialog() {
-        if (dialogRef.current === null) return
-        if (dialogRef.current.hasAttribute('open')) dialogRef.current.close();
-        else dialogRef.current.showModal();
+        if (dialogRef.current === null) return;
+        if (dialogRef.current.hasAttribute('open')) {
+            dialogRef.current.close();
+            onOpenChange?.(false);
+        } else {
+            dialogRef.current.showModal();
+            onOpenChange?.(true);
+        }
     }
 
     return (

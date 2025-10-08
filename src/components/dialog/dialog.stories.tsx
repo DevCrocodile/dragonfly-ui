@@ -46,7 +46,7 @@ const DialogWithExternalControl = () => {
     return (
         <div>
             <Button onClick={() => { setIsOpen(prev => !prev) }}>Open Dialog</Button>
-            <Dialog open={isOpen} >
+            <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger asChild>
                     <Button>Open Dialog</Button>
                 </DialogTrigger>
